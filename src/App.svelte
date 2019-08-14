@@ -13,10 +13,6 @@
 	function handlerBackNavigation(event){
 		curRoute.set(event.state.path)
 	}
-
-	function testButton(){
-		alert('oh yeah')
-	}
 </script>
 
 <style>
@@ -33,4 +29,3 @@
 <div id="pageContent">
 	<svelte:component this={router[$curRoute]} />
 </div>
-<button on:click={testButton}>Click</button>
