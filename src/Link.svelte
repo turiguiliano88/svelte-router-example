@@ -1,9 +1,7 @@
 <script>
   import { curRoute } from './store';
-  export let page = {
-    path: '/',
-    name: 'Home'
-  }
+  export let page;
+
   function redirectTo(event){
     // change current router path
     curRoute.set(event.target.pathname);
