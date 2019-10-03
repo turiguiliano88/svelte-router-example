@@ -1,13 +1,15 @@
-import Home from './Home.svelte';
-import About from './About.svelte';
-import { writable } from 'svelte/store';
+import Home from './pages/Home.svelte';
+import About from './pages/About.svelte';
 
-const router = {
-  '/': Home,
-  '/home': Home,
-  '/about': About
-}
-
-
-export default router;
-export const curRoute = writable('/home');
+export default [
+  {
+    path: '/',
+    name: 'Home',
+    component: Home,
+  },
+  {
+    path: '/about',
+    name: 'About',
+    component: About,
+  }
+]
